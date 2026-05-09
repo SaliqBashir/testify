@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-poppins: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  
+  /* Earthy Pastel Palette from User */
+  --color-brand-caramel: #FCB97D;
+  --color-brand-gold: #EDD892;
+  --color-brand-khaki: #C6B89E;
+  --color-brand-ash: #B5B8A3;
+  --color-brand-sage: #AABA9E;
+
+  /* Overriding indigo to use the Caramel/Orange theme for buttons/highlights */
+  --color-indigo-50: #fff9f2;
+  --color-indigo-100: #feecdb;
+  --color-indigo-500: #f2a969;
+  --color-indigo-600: #FCB97D; /* User's Caramel */
+  --color-indigo-700: #d69862;
+
+  /* Overriding purple for gradients */
+  --color-purple-500: #EDD892;
+}
+
+@utility stripe-gradient {
+  background: linear-gradient(135deg, #fffcf5 0%, #f4eee1 100%);
+}
+
+@utility stripe-card-shadow {
+  box-shadow: 0 13px 27px -5px rgba(237, 216, 146, 0.25), 0 8px 16px -8px rgba(198, 184, 158, 0.3), 0 -6px 16px -6px rgba(181, 184, 163, 0.1);
+}
+
+@utility stripe-hero-bg {
+  background-color: #ffffff;
+  background-image: radial-gradient(at 0% 0%, rgba(252, 185, 125, 0.15) 0, transparent 50%), radial-gradient(at 100% 0%, rgba(170, 186, 158, 0.15) 0, transparent 50%);
+}
+
+/* Base styles to remove the global dark background that was baked into previous dark mode implementation if any */
+body {
+  background-color: #fffdfa;
+  color: #4a4d45;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
