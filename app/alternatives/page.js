@@ -23,7 +23,7 @@ export default function Alternatives() {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_FLASK_URL}/api/analyze-commodity/api/alternatives/${encodeURIComponent(query)}`,
+        `${process.env.NEXT_PUBLIC_FLASK_URL}/api/alternatives/${encodeURIComponent(query)}`,
       );
 
       if (!response.ok) {
